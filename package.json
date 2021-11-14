@@ -1,0 +1,21 @@
+{
+  "name": "manga-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "an-anime-scraper": "^2.0.0",
+    "ctk-anime-scraper": "^3.5.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^11.0.0",
+    "readline-sync": "^1.4.10"
+  }
+}
