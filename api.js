@@ -35,5 +35,5 @@ const animeName = 'https://animefire.net/animes/'+`${animeSearch}`+'-todos-os-ep
   await browser.close();
 })();
 
-// adicionar para pegar os links dos epsodios
+
 
