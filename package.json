@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "an-anime-scraper": "^2.0.0",
-    "ctk-anime-scraper": "^3.5.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.15",
     "puppeteer": "^11.0.0",
