@@ -9,7 +9,7 @@ const animeName = 'https://animefire.net/animes/'+`${animeSearch}`+'-todos-os-ep
   const page = await browser.newPage();
   await page.goto(`${animeName}`);
 
-  // Get the "viewport" of the page, as reported by the page.
+  // Pega todas informações sobre o anime
   const anime = await page.evaluate(() => {
     return {
 
@@ -34,3 +34,6 @@ const animeName = 'https://animefire.net/animes/'+`${animeSearch}`+'-todos-os-ep
 
   await browser.close();
 })();
+
+// adicionar para pegar os links dos epsodios
+
