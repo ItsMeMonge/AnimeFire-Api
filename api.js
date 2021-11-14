@@ -9,7 +9,6 @@ const animeName = 'https://animefire.net/animes/'+`${animeSearch}`+'-todos-os-ep
   const page = await browser.newPage();
   await page.goto(`${animeName}`);
 
-
   // Get the "viewport" of the page, as reported by the page.
   const anime = await page.evaluate(() => {
     return {
@@ -35,18 +34,3 @@ const animeName = 'https://animefire.net/animes/'+`${animeSearch}`+'-todos-os-ep
 
   await browser.close();
 })();
-
-
-function getMangaById(id) {
-  var return_data  = {"anime": {}};
-  
-  return (async () => {
-      try {
-          let response = await got(`https://animefire.net/animes/'+${animeSearch}+'-todos-os-episodios`);
-          return_data.anime = parseanime(response.body, id);
-      } catch (error) {
-          console.error(error.message);
-      }
-      return return_data;
-  })();
-}
