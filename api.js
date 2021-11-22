@@ -2,7 +2,9 @@ const readlineSync = require('readline-sync');
 const puppeteer = require('puppeteer');
 // ===========================================================
 const animeSearch = readlineSync.question('Nome Do Anime: ');
-const animeName = 'https://animefire.net/animes/'+`${animeSearch}`+'-todos-os-episodios';
+str = animeSearch.replace(/\s+/g, '-');
+
+const animeName = 'https://animefire.net/animes/'+`${str}`+'-todos-os-episodios';
 
 (async () => {
   const browser = await puppeteer.launch();

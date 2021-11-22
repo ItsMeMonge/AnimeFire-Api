@@ -2,8 +2,10 @@ const readlineSync = require('readline-sync');
 const puppeteer = require('puppeteer');
 // ===========================================================
 const animeSearch = readlineSync.question('Nome Do Anime: ');
+str = animeSearch.replace(/\s+/g, '-');
+
 const epsodio = readlineSync.question('Numero Do Epsodio: ')
-const animeName = `https://animefire.net/animes/${animeSearch}/${epsodio}`;
+const animeName = `https://animefire.net/animes/${str}/${epsodio}`;
 
 
 (async () => {
@@ -19,7 +21,7 @@ const animeName = `https://animefire.net/animes/${animeSearch}/${epsodio}`;
   });
   // agora eu tenho que acessar a pagina do json e pegar o link do epsodio
 
-  console.log('anime:', anime);
+  //console.log('anime:', anime);
 
   await browser.close();
 
@@ -32,8 +34,7 @@ const animeName = `https://animefire.net/animes/${animeSearch}/${epsodio}`;
     // Pega todas informações sobre o anime
     const link_json = await aage.evaluate(() => {
       return {
-          teste: document.querySelector("body > pre").innerText
-          ,
+          teste: document.querySelector("body > pre").innerText,
       };
     });
     // agora eu tenho que acessar a pagina do json e pegar o link do epsodio
