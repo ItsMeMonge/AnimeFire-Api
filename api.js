@@ -6,9 +6,8 @@ async function GetEpisodes () {
   // ===========================================================
   const animeSearch = readlineSync.question('Nome Do Anime: ');
   str = animeSearch.replace(/\s+/g, '-');
-  
-  const epsodio = readlineSync.question('Numero Do Epsodio: ')
-  const animeName = `https://animefire.net/animes/${str}/${epsodio}`;
+  // fazer o bagulho e entrar nas urls e pegar os eps
+  const animeName = `https://animefire.net/video/${str}?tempsubs=0&1642383060`;
   
 
   const browser = await puppeteer.launch();
@@ -89,5 +88,5 @@ async function GetInfoAnime (){
   await browser.close();
 };
 
-GetInfoAnime()
+GetEpisodes()
 
