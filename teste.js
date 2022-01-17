@@ -21,20 +21,7 @@ async function teste (){
   const search = await page.evaluate(() => {
     return {
     //  return: document.querySelector("body > pre").innerText,
-    async function(){
-      for(const u of [...document.querySelectorAll('.divNumEp')].map(e => e.href.replace('animes', 'video')+'?tempsubs=0&1642383060')) {
-        const jsonData = await fetch(u).then(async e => await e.json());
-          console.log(jsonData);
-          req: jsonData
-          await new Promise(resolve => setTimeout(resolve, 1000));
-      }
-    }
-    
-  
-    
-    
-
-
+    async function () { for(const u of [...document.querySelectorAll('.divNumEp')].map(e => e.href.replace('animes', 'video')+'?tempsubs=0&1642383060')) { const jsonData = await fetch(u).then(async e => await e.json()); console.log(jsonData); await new Promise(resolve => setTimeout(resolve, 1000)); } }
     //  return: [...document.querySelectorAll('.divNumEp')].map(e => e.href.replace('animes', 'video')+'?tempsubs=0&1642383060'),
     };
     // [...document.querySelectorAll('.divNumEp')].map(e => e.href.replace('animes', 'video')+'?tempsubs=0&1642383060').join(', ')
